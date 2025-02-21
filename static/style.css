@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#top-row {
+    display: flex;
+    flex: 1;              
+    overflow: hidden; }
+
+#sidebar {
+    width: 650px;
+    background: #222;
+    color: white;
+    padding: 10px;
+    overflow-y: auto; }
+
+#cy {
+    flex: 1;              
+    background: #1b1b1b;
+}
+
+#info-panel {
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #555;
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+th {
+    background-color: #444;
+}
+
+#bottom-bar {
+    height: 200px;
+    background: #333;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+    overflow-y: auto;
+}
+
+#body-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    table-layout: fixed;
+}
+
+#body-table th, #body-table td {
+    border: 1px solid #555;
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+
+#body-table th {
+    background-color: #444;
+    text-align: left;
+}
+
+.copy-text {
+    cursor: pointer;
+    color: #ffcc00;
+}
+
+.copy-text:hover {
+    text-decoration: underline;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.non-ascii-char {
+    opacity: 0.05;
+}
+
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#graphSelect {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#graphSelect option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.graph-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.graph-controls label {
+    margin-right: 5px; }
+
+.graph-controls button,
+.graph-controls select {
+    margin-right: 5px; }
+
+.graph-controls button:last-child {
+    margin-right: 0; }
+
+.script-button {
+    margin-left: auto; }

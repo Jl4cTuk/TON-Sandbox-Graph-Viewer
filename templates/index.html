@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+</head>
+<body>
+
+    <div id="container">
+        <div id="top-row">
+            <div id="sidebar">
+                <div class="graph-controls">
+                    <label for="graphSelect">Choose graph:</label>
+                    <button onclick="document.getElementById('file-upload').click()">📂</button>
+                    <select id="graphSelect"></select>
+                    <button onclick="loadSelectedGraph()">Load</button>
+                    <input type="file" id="file-upload" accept=".json" hidden>
+                    <button onclick="downloadScript()" class="script-button">📥 script</button>
+                </div>
+                
+                <hr>
+                
+                <div id="info-panel">
+                    <table id="info-table">
+                        <thead>
+                            <tr><th>Key</th><th>Value</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="2">Choose node...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="cy"></div>
+        </div>
+
+        <div id="bottom-bar">
+            <button onclick="toggleHighlight()">ASCII highlight</button>
+            <table id="body-table">
+                <tbody>
+                    <tr><th class="center-text">Body</th></tr>
+                    <tr><td id="body-hex" class="copy-text">No data</td></tr>
+                    <tr><td id="body-decoded" class="copy-text">No data</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

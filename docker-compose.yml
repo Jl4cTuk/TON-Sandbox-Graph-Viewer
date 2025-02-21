@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ${TON_GRAPH_PATH}:/app/graphs
+      - ./static:/app/static
+    environment:
+      - FLASK_ENV=development
+      - TON_GRAPH_PATH=/app/graphs
+    restart: unless-stopped
