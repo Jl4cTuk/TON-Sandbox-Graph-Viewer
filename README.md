@@ -1,6 +1,7 @@
 # TON Graph Viewer
 
-> Dark mode is here, and it looks great!
+![screen](Screenshot.png)
+> Dark mode is here, and it looks great! 💅
 
 ## Usage
 
