@@ -5,7 +5,7 @@
 
 ## Usage
 
-Include the script in your tests folder inside your blueprint project:
+Include the [script](https://github.com/Jl4cTuk/TON-Sandbox-Graph-Viewer/blob/main/static/generateGraph.ts) in your tests folder inside your blueprint project:
 
 `import { generateGraph } from './generateGraph';`
 
